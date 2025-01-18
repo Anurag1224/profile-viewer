@@ -1,7 +1,4 @@
-# Profile Viewer
 
-    - Created the profile viewer app using create-react-app
-    - created the folder structure
 
 # Folder Structure
 
@@ -16,8 +13,17 @@
             - AdminDashboard.js
         - utils
             - profileSlice.js
-            - store.js
+            - store.js  // Redux Store
         - services
             - mapService.js
         - App.js
         - index.js
+
+
+
+# Profile Viewer
+
+    - Created the profile viewer app using create-react-app
+    - created the folder structure
+    - created the routing configuration using createBrowserRouter from react-router-dom library
+    
