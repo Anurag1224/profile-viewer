@@ -10,7 +10,7 @@ const ProfileCard = ({user}) => {
 
   const handleViewDetails = () => {
     navigate(`/profile/'${user.id}`);
-    dispatch(currentProfileStatus(user.id - 1));
+    dispatch(currentProfileStatus(user.id));
   };
 
   return (
@@ -32,7 +32,7 @@ const ProfileCard = ({user}) => {
 export const UserProfile = ({user}) => {
 
   return (
-    <div className="profile-card bg-gray-200 shadow-lg rounded-lg p-4 py-16 w-72 h-96 m-8 mt-0 justify-items-center">
+    <div className="profile-card bg-gray-200 shadow-lg rounded-lg pt-8 p-4 md:py-14 md:w-72 md:h-96 m-8 mt-0 justify-items-center">
       <img src={user.photo} alt={user.name} className="w-24 object-cover rounded-full ring-8 ring-white shadow-lg shadow-slate-600" />
       <h3 className="text-lg font-semibold mt-3">{user.name}</h3>
       <p className="text-sm text-gray-600 text-center" >{user.description}</p>
@@ -40,7 +40,8 @@ export const UserProfile = ({user}) => {
             📍Address
             <p className="text-sm text-gray-600 text-center" >({user.address.lat}, {user.address.lng})</p>
             
-        </div>      
+      </div> 
+      <p className="text-sm pt-4 font-semibold text-gray-600 text-center" >Profile Id : {user.id}</p>
       
       
     </div>

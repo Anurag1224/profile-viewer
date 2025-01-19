@@ -14,8 +14,6 @@
         - utils
             - profileSlice.js
             - store.js  // Redux Store
-        - services
-            - mapService.js
         - style
             - homePage.css
         - App.js
@@ -34,3 +32,8 @@
     - Rendered the list of profiles on the UI
     - created the Home Page and added hamburger icon for navigation to admin dashboard, homePage and to navigate to profile page.
     - made the search functional
+    - implemented google maps and make it functional and dynamic also added location pointer
+    - created AdminDashboard and made it functional
+    - made all the necessary changes on the css part to solve the styling issues
+    
+    

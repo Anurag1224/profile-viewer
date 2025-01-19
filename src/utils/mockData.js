@@ -1,4 +1,11 @@
 var mockProfiles = [
+  {
+    "id": "0",
+    "name": "Avery Scott",
+    "photo": "https://randomuser.me/api/portraits/women/0.jpg",
+    "description": "Freelance Photographer capturing moments.",
+    "address": { "lat": 37.9838, "lng": 23.7275 }
+    },
     {
       "id": "1",
       "name": "John Doe",

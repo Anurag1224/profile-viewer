@@ -13,13 +13,13 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 flex flex-col items-center justify-center text-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-indigo-300 to-purple-200 flex flex-col items-center justify-center text-gray-800 w-screen ">
       <nav className="absolute top-0 left-0 w-full p-6 ">
   
         <div className="relative group">
-          <button className="text-3xl focus:outline-none hover:scale-105 fixed top-6 z-10">☰</button>
-          <div className="absolute left-0 mt-10 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-36 z-20">
-            <ul className="flex flex-col p-4 space-y-2">
+          <button className="text-3xl focus:outline-none hover:scale-105 fixed top-6 z-30">☰</button>
+          <div className="fixed left-6 top-6 mt-10 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-[134px] z-30 ">
+            <ul className="flex flex-row p-4 space-x-4 ">
               <li>
                 <Link to="/admin" className="hover:text-indigo-500">
                   Admin
@@ -38,7 +38,7 @@ const HomePage = () => {
       </nav>
 
       {isHomePath ? (
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 w-[100%]">
           <h1 className="text-5xl font-bold mb-6 text-indigo-700 animate-fade-in">
             Welcome to Profile Viewer
           </h1>

@@ -19,12 +19,12 @@ const ProfileDetails = () => {
   }
 
   return (
-    <div className='flex flex-wrap'>
-      <div>
+    <div className='flex flex-col mt-20 flex-wrap md:flex-row md:mt-0'>
+      <div className=''>
         <UserProfile user={profile[currentProfileStatus]}/>
         
       </div>
-      <div className='w-[700px]'>
+      <div className='md:w-[700px]'>
       <MapComponent address = {profile[currentProfileStatus].address}/>
     </div>
     </div>
