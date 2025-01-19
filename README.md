@@ -25,5 +25,9 @@
 
     - Created the profile viewer app using create-react-app
     - created the folder structure
-    - created the routing configuration using createBrowserRouter from react-router-dom library
-    
+    - created the routing configuration on the root level component (i.e App.js) using createBrowserRouter from react-router-dom library
+    - created the profile card 
+    - setup redux store 
+    - created profiles slice 
+    - Rendered the list of profiles on the UI
+    - created the Home Page and added hamburger icon for navigation to admin dashboard, homePage and to navigate to profile page.

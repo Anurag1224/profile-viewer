@@ -1,23 +1,41 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import ProfileDetails from "./component/ProfileDetails";
 import AdminDashboard from "./pages/AdminDashboard";
+import ProfileList from "./component/ProfileList";
+import { Provider } from "react-redux";
+import appStore from "./utils/store";
 
 const App = () => {
 
   const appRoute = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage/> 
+      element: <HomePage/>, 
+      children: [
+        {
+          path: "/admin",
+          element: <AdminDashboard/>
+        },
+        {
+          path: "/users",
+          element: <ProfileList/>
+        },
+        {
+          path: "/profile/:id",
+          element: <ProfileDetails/>
+        }
+      ],
     },
-    {
-      path: "/admin",
-      element: <AdminDashboard/>
-    }
+    
   ]);
 
   return (
     <div className="App">
-      <h1 className='text-orange-300'>This is Profile Viewer</h1>
+      <Provider store={appStore}>
+          <RouterProvider router={appRoute} />
+      </Provider>
+        
     </div>
   );
 }
