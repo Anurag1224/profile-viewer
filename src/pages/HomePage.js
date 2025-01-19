@@ -18,7 +18,7 @@ const HomePage = () => {
   
         <div className="relative group">
           <button className="text-3xl focus:outline-none hover:scale-105 fixed top-6 z-30">☰</button>
-          <div className="fixed left-6 top-6 mt-10 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-[134px] z-30 ">
+          <div className="fixed left-6 top-6 mt-10 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-[138px] z-30 ">
             <ul className="flex flex-row p-4 space-x-4 ">
               <li>
                 <Link to="/admin" className="hover:text-indigo-500">
@@ -27,7 +27,7 @@ const HomePage = () => {
               </li>
               <li>
                 {isHomePath? (<Link to="/users" className="hover:text-indigo-500">
-                  User
+                  Profile
                 </Link>):(<Link to="/" className="hover:text-indigo-500">
                   Home
                 </Link>)}
