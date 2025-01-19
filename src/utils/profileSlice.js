@@ -1,8 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import mockProfiles from "../utils/mockData";
 
 export const fetchProfiles = createAsyncThunk('profiles/fetchProfiles', async () => {
-  const response = await fetch('https://api.github.com/users');
-  return response.json();
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(mockProfiles);
+    }, 200);
+  });
 });
 
 const profileSlice = createSlice({
@@ -26,9 +30,9 @@ const profileSlice = createSlice({
       deleteProfile: (state, action) => {
         state.data = state.data.filter((p) => p.id !== action.payload);
       },
-      currentProfileStatus: (state, action) => {
-        state.currentProfile = (action.payload);
-      },
+      currentProfileStatus:(state, action) =>{
+        state.currentProfile = action.payload;
+      }
     },
     extraReducers: (builder) => {
       builder
@@ -46,5 +50,5 @@ const profileSlice = createSlice({
     },
   });
   
-  export const { addProfile, editProfile, deleteProfile, addFilterProfile, currentProfileStatus } = profileSlice.actions;
+  export const { addProfile, editProfile, deleteProfile, currentProfileStatus } = profileSlice.actions;
   export default profileSlice.reducer;

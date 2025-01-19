@@ -1,4 +1,4 @@
-
+# I have used create-react-app to build the project
 
 # Folder Structure
 
@@ -16,6 +16,8 @@
             - store.js  // Redux Store
         - services
             - mapService.js
+        - style
+            - homePage.css
         - App.js
         - index.js
 
@@ -31,3 +33,4 @@
     - created profiles slice 
     - Rendered the list of profiles on the UI
     - created the Home Page and added hamburger icon for navigation to admin dashboard, homePage and to navigate to profile page.
+    - made the search functional

@@ -17,8 +17,8 @@ const HomePage = () => {
       <nav className="absolute top-0 left-0 w-full p-6 ">
   
         <div className="relative group">
-          <button className="text-3xl focus:outline-none">☰</button>
-          <div className="absolute left-0 mt-2 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-36">
+          <button className="text-3xl focus:outline-none hover:scale-105 fixed top-6 z-10">☰</button>
+          <div className="absolute left-0 mt-10 hidden group-focus-within:block bg-white text-gray-700 rounded-lg shadow-lg w-36 z-20">
             <ul className="flex flex-col p-4 space-y-2">
               <li>
                 <Link to="/admin" className="hover:text-indigo-500">
